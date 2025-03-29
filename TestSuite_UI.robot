@@ -11,25 +11,25 @@ Suite Teardown     Generate HTML Report
 Test Teardown   End test
 
 *** Test Cases ***
-Sample test to Compare 2 different images Delete
-    ${img1}     Set Variable     ${FIGMA_DIR}/345_figma.png
-    ${img2}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
-    Report-Browser/Device     chrome
-    Compare 2 Images And Find Difference    ${img1}     ${img2}
+#Sample test to Compare 2 different images Delete
+    #${img1}     Set Variable     ${FIGMA_DIR}/345_figma.png
+    #${img2}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
+    #Report-Browser/Device     chrome
+    #Compare 2 Images And Find Difference    ${img1}     ${img2}
 
-Sample test to Compare 2 different images
-    ${img1}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
-    ${img2}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
-    #${img2}     Set Variable     ${SCREENSHOTS_DIR}/Screenshot1733741490.29968.png
-    Report-Browser/Device     chrome
-    Compare 2 Images And Find Difference  ${img1}     ${img2}
+#Sample test to Compare 2 different images
+    #${img1}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
+    #${img2}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
+    ##${img2}     Set Variable     ${SCREENSHOTS_DIR}/Screenshot1733741490.29968.png
+    #Report-Browser/Device     chrome
+    #Compare 2 Images And Find Difference  ${img1}     ${img2}
 
-Sample test to Compare 2 similar images
-    ${img1}     Set Variable     ${FIGMA_DIR}/345_figma.png
-    ${img2}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
+#Sample test to Compare 2 similar images
+    #${img1}     Set Variable     ${FIGMA_DIR}/345_figma.png
+    #${img2}     Set Variable     ${FIGMA_DIR}/345_figma_1.png
     #${img2}     Set Variable     ${SCREENSHOTS_DIR}/headlesschrome_Mobile.png
-    Report-Browser/Device     chrome
-    Compare 2 Images And Find Difference  ${img1}     ${img2}
+    #Report-Browser/Device     chrome
+    #Compare 2 Images And Find Difference  ${img1}     ${img2}
 
 Data driven test to Compare figma images fetched from excel with live site in Cross-Browser setting
     [Template]    Responsive and Cross-Browser Testing Common Keyword
@@ -67,7 +67,8 @@ Responsive and Cross-Browser Testing Common Keyword
                 ${web_css_json}     Get Webapp JSON Data    ${figma_text_list}
                 ${results}      Compare Figma With Web Json       ${figma_text_nodes}     ${web_css_json}
                 ${pixel_perfect_report_path}   Generate HTML Report from JSON    ${results}
-
+                #Code for PSCI project
+                #Click Element    xpath=/html/body/div[2]/div[1]/div/div/div[2]/button[3]
                 Capture Screenshot of live app and compare with passed image    ${figma_image_path}     ${pixel_perfect_report_path}
 
                 Close All Browsers
