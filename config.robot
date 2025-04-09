@@ -7,7 +7,9 @@ ${testdata}     testdata
 ${FIGMA_DIR}     ${CURDIR}/${testdata}/figma
 ${EXCEL_FILE}     ${CURDIR}/${testdata}/Resolutions.xlsx
 
-${SCREENSHOTS_DIR}     ${OUTPUT_DIR}/screenshots
+#${SCREENSHOTS_DIR}     ${OUTPUT_DIR}/screenshots
+
+${SCREENSHOTS_DIR}          output/screenshots
 ${OUT_IMG_FOLDER_NAME}      comparison_output
 ${COMPARISON_OUTPUT_DIR}     ${OUTPUT_DIR}/${OUT_IMG_FOLDER_NAME}
 
