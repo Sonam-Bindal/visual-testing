@@ -34,8 +34,8 @@ Test Teardown   End test
 Data driven test to Compare figma images fetched from excel with live site in Cross-Browser setting
     [Template]    Responsive and Cross-Browser Testing Common Keyword
     chrome
-    #firefox
-    #edge
+    firefox
+    edge
 
 *** Keywords ***
 Responsive and Cross-Browser Testing Common Keyword
