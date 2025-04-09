@@ -1,5 +1,5 @@
 *** Variables ***
-${WAIT_TIME_IN_SECONDS}    70
+${WAIT_TIME_IN_SECONDS}    60
 ${OUTPUT_DIR}     ${CURDIR}/output
 ${CUSTOM_REPORT_OUTPUT_DIR}     ${CURDIR}/output/report
 
